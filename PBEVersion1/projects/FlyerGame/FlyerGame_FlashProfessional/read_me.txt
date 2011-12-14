@@ -9,10 +9,10 @@
  //
  
  //	PROJECT SETUP DETAILS
- //		TYPE			: HTML5 & JavaScript
- //		IDE				: Aptana Studio 3.0
- //		TARGET			: Run ./index.html with an HTML5 enabled browser. (See http://html5test.com/ for help.)
- //		DEPENDENCIES	: Requires the CraftyJS (http://craftyjs.com/) framework. This *IS* included for you.
+ //		TYPE		: Flash and ActionScript 3.0
+ //		IDE		: Flash Professional CS5
+ //		TARGET		: Run ./FlyerGame_FlashProfessional.html with an Flash Enabled browser.
+ //		DEPENDENCIES	: Requires the PushButtonEngine (http://PushButtonEngine.com/) framework. This *IS* included for you.
  //		COMPILER ARGS   :	
 
  //	DOCUMENTATION
@@ -22,5 +22,5 @@
  //		Checkout this folder via GIT or download the zip per 'PROJECT SETUP DETAILS' above.
  
  //	WARNINGS
- //		index.html loads game_iframe.html. This changes the "Restart Game" button code and some things. FYI. All works well.
+ //		Open the *.FLA file and read the warnings text on the stage.
  
