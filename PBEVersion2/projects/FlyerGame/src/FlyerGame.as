@@ -100,8 +100,8 @@ package
 		
 		//PUBLIC STATIC
 		public static const FLYER_MOVEMENT_RADIUS : uint 		= 30;  //increase to move more per keypress
-		public static const STAGE_VICTORY_Y_POSITION : uint 	= 30;
-		public static const ENEMY_MAX_MOVEMENT_RADIUS : uint 	= 30; //increase to raise difficulty
+		public static const STAGE_VICTORY_Y_POSITION : uint 	= 60;
+		public static const ENEMY_MAX_MOVEMENT_RADIUS : uint 	= 20; //increase to raise difficulty
 		public static const COLLISION_DETECTION_RADIUS : uint 	= 30; //increase to raise difficulty
 		
 		
@@ -372,7 +372,6 @@ package
 			//							run logic, more...
 			////////////////////////////////////////////////////////////////////////
 			//BACKGROUND
-			/*
 			_background_mcgo = _doCreateMovieClipGameObject (FlyerGameResources.MOVIE_CLIP_BACKGROUND_MC, new Point (0,0));
 			_background_mcgo.initialize();
 			
@@ -388,7 +387,6 @@ package
 			_biplane2_mcgo = _doCreateEnemyMovieClipGameObject (FlyerGameResources.MOVIE_CLIP_BIPLANE_MC, new Point(440, 440), 1, FlyerGame.ENEMY_MAX_MOVEMENT_RADIUS/3);
 			_biplane2_mcgo.initialize();
 			
-			*/
 			//FLYER
 			_flyer_mcgo = _doCreateFlyerMovieClipGameObject (FlyerGameResources.MOVIE_CLIP_FLYER_MC, new Point(220, 520)); 
 			_flyer_mcgo.initialize();
@@ -413,8 +411,7 @@ package
 			_instructions_textfield.x = 1;
 			_instructions_textfield.y = 1;
 			var textFormat1 : TextFormat = new TextFormat();
-			textFormat1.align = TextAlign.LEFT
-				;
+			textFormat1.align = TextAlign.LEFT;
 			textFormat1.size = 10;
 			textFormat1.color = 0x000000;
 			_instructions_textfield.defaultTextFormat = (textFormat1);
@@ -436,8 +433,6 @@ package
 		private function _doApplyEffects () : void
 		{
 			//TURN OFF DURING TESTING, NO REAL REASON...
-			return;
-			
 			
 			//SET ALL TO HAVE A NICE DROPSHADOW - THE SAME ONE
 			_flyer_mcgo.render.movieClip.filters = 
