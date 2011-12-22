@@ -1,0 +1,14 @@
+format all classes nicely with comments
+
+
+change the date in all class comments
+
+
+move classes to the proper package
+
+
+delete unneeded packages/classes
+
+'flatten' the game (i.e. don't have superclasses if not REQUIRED, so its more readable. MAAAAYBE)
+
+check object 'size' vs registration point and look closely at coords for its bounds (so to speak) and see that screentrap works pixelperfect on that
