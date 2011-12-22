@@ -88,10 +88,10 @@ package com.rmc.projects.pbe2.pbflyergame.components.movement
 		{
 			
 			//	CHECK BOUNDS: HORIZONTAL
-			if (position.x - size.x /2 > stage.stageWidth) {
-				position.x = stage.x - size.x / 2;
-			} else if (position.x + size.x /2 < stage.x) {
-				position.x = stage.stageWidth + size.x / 2;
+			if (position.x + size.x > stage.stageWidth) {
+				position.x = stage.x + size.x;
+			} else if (position.x - size.x < stage.x) {
+				position.x = stage.stageWidth - size.x;
 			}
 			
 			//	CHECK BOUNDS: VERTICAL

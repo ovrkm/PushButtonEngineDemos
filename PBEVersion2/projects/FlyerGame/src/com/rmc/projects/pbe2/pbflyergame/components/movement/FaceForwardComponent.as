@@ -28,6 +28,8 @@ package com.rmc.projects.pbe2.pbflyergame.components.movement
 	//--------------------------------------
 	//  Imports
 	//--------------------------------------
+	import com.rmc.projects.pbe2.pbflyergame.components.spatial.SpatialComponent;
+	
 	import flash.geom.Point;
 	
 	// --------------------------------------
@@ -54,6 +56,11 @@ package com.rmc.projects.pbe2.pbflyergame.components.movement
 		 * 
 		 */
 		private var _positionPrevious_point : Point;
+		
+		/**
+		 *  
+		 */		
+		public function get spatialComponent () 					: SpatialComponent 	{ return owner.lookupComponent("spatial"); }
 		
 		//PRIVATE
 		
@@ -96,28 +103,44 @@ package com.rmc.projects.pbe2.pbflyergame.components.movement
 			
 			var positionDeltaX_num : Number = position.x - _positionPrevious_point.x;
 			var positionDeltaY_num : Number = position.y - _positionPrevious_point.y;
-
+			var nextRotation_num : Number;
+			
 			if (positionDeltaX_num < 0) {
 				//	MOVING LEFT
-				rotation = -90;
+				nextRotation_num = -90;
 			} else if (positionDeltaX_num > 0) {
 				//	MOVING RIGHT
-				rotation = 90;
+				nextRotation_num = 90;
 			}
 			
 			if (positionDeltaY_num < 0) {
 				//	MOVING UP
-				rotation = 0;
+				nextRotation_num = 0;
 			} else if (positionDeltaY_num > 0) {
 				//	MOVING DOWN
-				rotation = 180;
+				nextRotation_num = 180;
 			}
 
-			rotation = 100*Math.random();
+			//CREATE SEPARATE FUNCTION - DUE TO ISSUE BELOW
+			if (nextRotation_num) {
+				_updateRotationOnSpatial(nextRotation_num);
+			}
+			
 			//	UPDATE PREVIOUS POSITION
 			_positionPrevious_point = position.clone();
 		}
 		
+		
+		
+		private function _updateRotationOnSpatial(aNextRotation_num : Number):void
+		{
+			//1. IDEALLY THIS WILL WORK, BUT BINDING IS FAILING FOR ME. NOT SURE WHY
+			//rotation = aNextRotation_num;
+			
+			//2. SO I USE THIS, WHICH IS (MORE COUPLED = BAD) ALTERNATIVE
+			spatialComponent.rotation = aNextRotation_num;
+			
+		}		
 		
 	}
 }

@@ -106,7 +106,7 @@ package com.rmc.projects.pbe2.pbflyergame.components.render
 				_rotation_num = aValue; 
 				
 				_displayObject.rotation = _rotation_num;
-				trace ("_displayObject.rotation: " + _displayObject.rotation);
+				//trace ("_displayObject.rotation: " + _displayObject.rotation);
 			//}
 		}
 		
