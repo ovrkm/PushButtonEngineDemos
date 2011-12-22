@@ -114,6 +114,10 @@ package com.rmc.projects.pbe2.pbflyergame.components.input
 			//PLAY SOUND
 			FlyerGame.getInstance().playMoveFlyerSound();
 			
+			//THIS WORKS
+			//owner.lookupComponent("spatial").rotation = Math.random()*100;
+			
+			//BUT THIS DOES NOTHING
 			rotation = Math.random()*100;
 		}
 
