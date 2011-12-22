@@ -38,6 +38,11 @@
 ehthumbs.db
 Icon?
 Thumbs.db
+bin-debug
+.settings
+.actionScriptProperties
+.flashProjectProperties
+.project
 
 # Premium (For-Pay) Frameworks Not Fit for Distribution #
 ######################
